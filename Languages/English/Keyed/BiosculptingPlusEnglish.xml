@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Beauty Cycle -->
+  <BiosculpterBeautyCycleComplete_Ugly>{PAWN_labelShort} is now a ugly.</BiosculpterBeautyCycleComplete_Ugly>
+  <BiosculpterBeautyCycleComplete_Normal>{PAWN_labelShort} is no longer ugly.</BiosculpterBeautyCycleComplete_Normal>
+  <BiosculpterBeautyCycleComplet_Pretty>{PAWN_labelShort} is now pretty.</BiosculpterBeautyCycleComplet_Pretty>
+  <BiosculpterBeautyCycleComplete_Beautiful>{PAWN_labelShort} is now beautiful.</BiosculpterBeautyCycleComplete_Beautiful>
+  <BiosculpterBeautyCycleFailed>{PAWN_labelShort} looks the same as before, did something go wrong ?</BiosculpterBeautyCycleFailed>
+  <!-- Beauty Cycle -->
+
+  <!-- AgeIncrease Cycle -->
+  <BiosculpterAgeIncreaseCycleComplete>{PAWN_labelShort} now appear one year older.</BiosculpterAgeIncreaseCycleComplete>
+  <!-- AgeIncrease Cycle -->
+
+  <!-- Voice Cycle -->
+  <BiosculpterVoiceFixCycleComplete_Fix>{PAWN_labelShort} vocal chords are now fixed.</BiosculpterVoiceFixCycleComplete_Fix>
+  <BiosculpterVoiceFixCycleComplete_Fail>{PAWN_labelShort} looks the same as before, did something go wrong ?</BiosculpterVoiceFixCycleComplete_Fail>
+  <!-- Voice Cycle -->
+
+  <!-- Settings -->
+  <Settings_ModName>BioSculptingPlus</Settings_ModName>
+  <Settings_ShowBeautyCycle>Show beauty cycle</Settings_ShowBeautyCycle>
+  <Settings_ShowAgeIncreaseCycle>Show age increase cycle</Settings_ShowAgeIncreaseCycle>
+  <Settings_TimeAgeIncreaseCycle>Age increase increment : </Settings_TimeAgeIncreaseCycle>
+  <Settings_ShowVoiceCycle>Show vocal chords fix cycle</Settings_ShowVoiceCycle>
+  <Settings_ReloadRequired>Restarting the game is necessary to apply settings</Settings_ReloadRequired>
+  <!-- Settings -->
+
+</LanguageData>

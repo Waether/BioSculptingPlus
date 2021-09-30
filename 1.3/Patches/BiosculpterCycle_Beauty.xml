@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+    </mods>
+
+    <!-- Check for Settings -->
+    <match Class="BioSculptingPlus.PatchOperationCheckSettings">
+      <settings>
+        <li>ShowBeautyCycle</li>
+      </settings>
+      <match Class="PatchOperationSequence">
+        <operations>
+
+          <!-- Vanilla -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps</xpath>
+            <value>
+              <li Class="BioSculptingPlus.CompProperties_BiosculpterPod_BeautyCycle">
+                <key>beauty</key>
+                <label>beauty</label>
+                <description>Rearrange the user's tissues to make them more appealing.</description>
+                <iconPath>UI/Gizmos/BiosculpterCycleBeauty</iconPath>
+                <nutritionRequired>10</nutritionRequired>
+                <durationDays>10</durationDays>
+                <operatingColor>(1.000,0.918,0.000)</operatingColor>
+              </li>
+            </value>
+          </li>
+          <!-- Vanilla -->
+
+          <!-- BiosculpterRework Compatibility -->
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>Biosculpter Reworked</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+              <operations>
+
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="BioSculptingPlus.CompProperties_BiosculpterPod_BeautyCycle"]/durationDays</xpath>
+                  <value>
+                    <durationDays>1</durationDays>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName="BiosculpterPod"]/comps/li[@Class="BioSculptingPlus.CompProperties_BiosculpterPod_BeautyCycle"]/nutritionRequired</xpath>
+                  <value>
+                    <nutritionRequired>1</nutritionRequired>
+                  </value>
+                </li>
+
+              </operations>
+            </match>
+          </li>
+          <!-- BiosculpterRework Compatibility -->
+
+        </operations>
+      </match>
+    </match>
+    <!-- Check for Settings -->
+
+  </Operation>
+</Patch>
