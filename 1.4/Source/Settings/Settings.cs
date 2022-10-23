@@ -1,7 +1,6 @@
 ﻿using RimWorld;
 using Verse;
 using UnityEngine;
-using SettingsHelper;
 
 namespace BioSculptingPlus
 {
@@ -33,19 +32,19 @@ namespace BioSculptingPlus
         public void DoWindowContents(Rect canvas)
         {
             Rect outRect = canvas.TopPart(0.9f);
-            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 1500f);
+            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 620f);
             Widgets.BeginScrollView(outRect, ref scrollPosition, rect);
             Listing_Standard list = new Listing_Standard();
             list.Begin(rect);
 
             BeautyCycleSettings.DoCustomCycleSettings(ref list);
-            list.AddHorizontalLine(ListingStandardHelper.Gap);
+            list.DrawGapLine();
             AgeIncreaseCycleSettings.DoCustomCycleSettings(ref list);
-            list.AddHorizontalLine(ListingStandardHelper.Gap);
+            list.DrawGapLine();
             VoiceCycleSettings.DoCustomCycleSettings(ref list);
-            list.AddHorizontalLine(ListingStandardHelper.Gap);
+            list.DrawGapLine();
             ToughCycleSettings.DoCustomCycleSettings(ref list);
-            list.AddHorizontalLine(ListingStandardHelper.Gap);
+            list.DrawGapLine();
             ImmunityCycleSettings.DoCustomCycleSettings(ref list);
 
             list.End();
@@ -81,8 +80,8 @@ namespace BioSculptingPlus
         }
 
         private R GetBiosculpterCompPropertiesAs<T, R>()
-            where R : CompProperties_BiosculpterPod_BaseCycle
             where T : CompBiosculpterPod_Cycle
+            where R : CompProperties_BiosculpterPod_BaseCycle
         {
             return DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(R) && x.compClass == typeof(T)) as R;
         }

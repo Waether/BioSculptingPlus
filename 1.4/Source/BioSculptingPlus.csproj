@@ -36,10 +36,6 @@
       <HintPath>..\..\..\..\DLL\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="1SettingsHelper-Inglix">
-      <HintPath>..\..\..\..\DLL\1SettingsHelper-Inglix.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\DLL\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -58,6 +54,10 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\DLL\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
@@ -84,6 +84,7 @@
     <Compile Include="BioSculpterCycles\Beauty\CompProperties_BiosculpterPod_BeautyCycle.cs" />
     <Compile Include="BioSculpterCycles\AgeIncrease\CompProperties_BiosculpterPod_AgeIncreaseCycle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\SettingsHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

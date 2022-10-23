@@ -1,5 +1,4 @@
-﻿using SettingsHelper;
-using Verse;
+﻿using Verse;
 
 namespace BioSculptingPlus
 {
@@ -7,7 +6,7 @@ namespace BioSculptingPlus
     {
         #region Actual
 
-        public string Label;
+        public string SettingLabel;
         public bool Enabled;
         public float Duration;
 
@@ -20,9 +19,9 @@ namespace BioSculptingPlus
 
         #endregion
 
-        public CycleSettings(string label, bool enabled = true, float duration = 1f)
+        public CycleSettings(string settingLabel, bool enabled = true, float duration = 1f)
         {
-            Label = label;
+            SettingLabel = settingLabel;
             Enabled = enabled;
             Duration = duration;
         }
@@ -33,11 +32,11 @@ namespace BioSculptingPlus
             Scribe_Values.Look(ref Duration, label + "Duration", duration);
         }
 
-        public void DoCustomCycleSettings(ref Listing_Standard list)
+        public void DoCustomCycleSettings(ref Listing_Standard ls)
         {
-            list.AddLabelLine(Label.Translate());
-            list.CheckboxLabeled("Settings_Enable".Translate(), ref Enabled);
-            list.AddLabeledSlider("Settings_TimeRequired".Translate(), ref Duration, 0f, 60f, null, null, 0.1f, true, Duration.ToString() + "Settings_Days".Translate(), 0.2f);
+            ls.DrawLabelLine(SettingLabel.Translate());
+            ls.DrawLabelCheckbox("Settings_Enable".Translate(), ref Enabled);
+            ls.DrawLabelSlider("Settings_TimeRequired".Translate(), ref Duration, 0f, 60f, null, null, 0.1f, true, Duration.ToString() + "Settings_Days".Translate());
             Store();
         }
 

@@ -17,17 +17,11 @@
 			<displayName>Harmony</displayName>
 			<downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</downloadUrl>
     </li>
-    <li>
-      <packageId>Inglix.FasterBiosculptingPod</packageId>
-      <displayName>FasterBiosculptingPod</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2576257954</steamWorkshopUrl>
-    </li>
   </modDependencies>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>Ludeon.RimWorld.Ideology</li>
     <li>brrainz.harmony</li>
-    <li>Inglix.FasterBiosculptingPod</li>
   </loadAfter>
   <packageId>waether.biosculptingplus.dev</packageId>
   <description>

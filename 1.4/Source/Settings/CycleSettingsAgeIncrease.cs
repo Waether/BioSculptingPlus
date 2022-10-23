@@ -1,5 +1,4 @@
-﻿using SettingsHelper;
-using Verse;
+﻿using Verse;
 
 namespace BioSculptingPlus
 {
@@ -17,7 +16,8 @@ namespace BioSculptingPlus
 
         #endregion
 
-        public CycleSettingsAgeIncrease(string label, float potency = 1f, bool enabled = true, float duration = 1f) : base(label, enabled, duration)
+        public CycleSettingsAgeIncrease(string settingLabel, float potency = 1f, bool enabled = true, float duration = 1f)
+            : base(settingLabel, enabled, duration)
         {
             TimeIncrease = potency;
         }
@@ -28,12 +28,12 @@ namespace BioSculptingPlus
             Scribe_Values.Look(ref TimeIncrease, label + "AgeIncrease", potency);
         }
 
-        public new void DoCustomCycleSettings(ref Listing_Standard list)
+        public new void DoCustomCycleSettings(ref Listing_Standard ls)
         {
-            list.AddLabelLine(Label.Translate());
-            list.CheckboxLabeled("Settings_Enable".Translate(), ref Enabled);
-            list.AddLabeledSlider("Settings_TimeRequired".Translate(), ref Duration, 0f, 60f, null, null, 0.1f, true, Duration.ToString() + "Settings_Days".Translate(), 0.2f);
-            list.AddLabeledSlider("Settings_TimeAgeIncreaseCycle".Translate(), ref TimeIncrease, 0f, 1200f, null, null, 15f, true, TimeIncrease.ToString() + "Settings_Days".Translate(), 0.2f);
+            ls.DrawLabelLine(SettingLabel.Translate());
+            ls.DrawLabelCheckbox("Settings_Enable".Translate(), ref Enabled);
+            ls.DrawLabelSlider("Settings_TimeRequired".Translate(), ref Duration, 0f, 60f, null, null, 0.1f, true, Duration.ToString() + "Settings_Days".Translate());
+            ls.DrawLabelSlider("Settings_TimeAgeIncreaseCycle".Translate(), ref TimeIncrease, 0f, 1200f, null, null, 15f, true, TimeIncrease.ToString() + "Settings_Days".Translate());
             Store();
         }
 
