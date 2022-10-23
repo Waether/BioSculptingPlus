@@ -30,7 +30,12 @@
         
         public static class BioOptWorkerCycleSettingsCycle
         {
-            public const float Duration = 8.0f;
+            public const float Duration = 2.0f;
+        }
+        
+        public static class BioOptSoldierCycleSettingsCycle
+        {
+            public const float Duration = 2.0f;
         }
 
     }

@@ -15,6 +15,7 @@ namespace BioSculptingPlus
         public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, RecommendedValues.ImmunityCycle.Duration);
         
         public CycleSettings BioOptWorkerCycleSettings = new CycleSettings("Settings_BioOptWorkerCycleSettingsCycle", true, RecommendedValues.BioOptWorkerCycleSettingsCycle.Duration);
+        public CycleSettings BioOptSoldierCycleSettings = new CycleSettings("Settings_BioOptSoldierCycleSettingsCycle", true, RecommendedValues.BioOptSoldierCycleSettingsCycle.Duration);
 
         private Vector2 scrollPosition;
 
@@ -29,6 +30,7 @@ namespace BioSculptingPlus
             ImmunityCycleSettings.ScribeValues("ImmunityCycle");
 
             BioOptWorkerCycleSettings.ScribeValues("BioOptWorkerCycle");
+            BioOptSoldierCycleSettings.ScribeValues("BioOptSoldierCycle");
 
             base.ExposeData();
         }
@@ -36,7 +38,7 @@ namespace BioSculptingPlus
         public void DoWindowContents(Rect canvas)
         {
             Rect outRect = canvas.TopPart(0.9f);
-            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 720f);
+            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 820f);
             Widgets.BeginScrollView(outRect, ref scrollPosition, rect);
             Listing_Standard list = new Listing_Standard();
             list.Begin(rect);
@@ -52,6 +54,8 @@ namespace BioSculptingPlus
             ImmunityCycleSettings.DoCustomCycleSettings(ref list);
             list.DrawGapLine();
             BioOptWorkerCycleSettings.DoCustomCycleSettings(ref list);
+            list.DrawGapLine();
+            BioOptSoldierCycleSettings.DoCustomCycleSettings(ref list);
 
             list.End();
             Widgets.EndScrollView();
@@ -83,6 +87,9 @@ namespace BioSculptingPlus
 
                 // BioOptWorker Cycle
                 BioOptWorkerCycleSettings.Duration = RecommendedValues.BioOptWorkerCycleSettingsCycle.Duration;
+
+                // BioOptSoldier Cycle
+                BioOptSoldierCycleSettings.Duration = RecommendedValues.BioOptSoldierCycleSettingsCycle.Duration;
 
                 ApplySettings();
             }
@@ -133,12 +140,18 @@ namespace BioSculptingPlus
             }
 
             // BioOpt Worker Cycle
-            var CompBioOptWorkerCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ImmunityCycle, CompProperties_BiosculpterPod_ImmunityCycle>();
+            var CompBioOptWorkerCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_BioOptWorkerCycle, CompProperties_BiosculpterPod_BioOptWorkerCycle>();
             if (CompBioOptWorkerCycle != null)
             {
                 CompBioOptWorkerCycle.durationDays = BioOptWorkerCycleSettings.Duration;
             }
 
+            // BioOpt Soldier Cycle
+            var CompBioOptSoldierCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_BioOptSoldierCycle, CompProperties_BiosculpterPod_BioOptSoldierCycle>();
+            if (CompBioOptSoldierCycle != null)
+            {
+                CompBioOptSoldierCycle.durationDays = BioOptSoldierCycleSettings.Duration;
+            }
         }
     }
 }

@@ -9,14 +9,16 @@
       <li Class="HediffCompProperties_Immunizable">
 				<immunityPerDayNotSick>0</immunityPerDayNotSick>
 				<immunityPerDaySick>0</immunityPerDaySick>
-				<severityPerDayNotImmune>-0.05</severityPerDayNotImmune>
-				<severityPerDayImmune>-0.05</severityPerDayImmune>
+				<!-- <severityPerDayNotImmune>-0.05</severityPerDayNotImmune>
+				<severityPerDayImmune>-0.05</severityPerDayImmune> -->
+				<severityPerDayNotImmune>-5</severityPerDayNotImmune>
+				<severityPerDayImmune>-5</severityPerDayImmune>
 			</li>
     </comps>
 
     <defName>BioOptDef</defName>
     <label>BioOptLabel</label>
-    <description>A strange mechanite that infest the body of it's host and alters it slowly.</description>
+    <description>Bio Opt Desc.</description>
     <makesSickThought>false</makesSickThought>
     <tendable>false</tendable>
     <maxSeverity>1</maxSeverity>
@@ -30,7 +32,71 @@
 						<capacity>Consciousness</capacity>
 						<offset>-0.20</offset>
 					</li>
+          <!-- <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.02</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.70</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.10</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <postFactor>1.3</postFactor>
+          </li> -->
 				</capMods>
+        <statOffsets>
+          <!-- <GlobalLearningFactor>0.25</GlobalLearningFactor>
+          <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.4</AimingDelayFactor>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <ResearchSpeed>0.3</ResearchSpeed>
+          <PlantWorkSpeed>0.4</PlantWorkSpeed>
+          <ConstructionSpeed>0.4</ConstructionSpeed>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+          <MiningSpeed>0.4</MiningSpeed>
+          <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+          <InjuryHealingFactor>0.25</InjuryHealingFactor>
+          <MoveSpeed>-0.4</MoveSpeed>
+          <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.2</MeditationFocusGain>
+          <TradePriceImprovement>0.18</TradePriceImprovement>
+          <ComfyTemperatureMin>-46</ComfyTemperatureMin>
+          <ComfyTemperatureMax>4</ComfyTemperatureMax>
+          <MedicalTendQualityOffset>0.07</MedicalTendQualityOffset>
+          <ImmunityGainSpeedFactor>0.02</ImmunityGainSpeedFactor>
+          <SurgerySuccessChanceFactor>0.05</SurgerySuccessChanceFactor>
+          <SocialImpact>0.10</SocialImpact>
+          <PainShockThreshold>0.10</PainShockThreshold>
+          <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+          <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.35</ToxicEnvironmentResistance>
+          <PsychicSensitivity>-0.90</PsychicSensitivity> -->
+        </statOffsets>
 			</li>
 			<li>
 				<minSeverity>0.200</minSeverity>
@@ -44,7 +110,7 @@
 			</li>
 			<li>
 				<minSeverity>0.600</minSeverity>
-				<label>optimized</label>
+				<label>optimal</label>
         <capMods>
 					<li>
 						<capacity>Consciousness</capacity>

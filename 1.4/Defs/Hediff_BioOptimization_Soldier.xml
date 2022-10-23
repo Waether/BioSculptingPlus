@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(255, 178, 102)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+    <defName>BioOptSoldierDef</defName>
+    <label>BioOptSoldierDef</label>
+    <description>Bio Opt Soldier Desc.</description>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+				<immunityPerDayNotSick>0</immunityPerDayNotSick>
+				<immunityPerDaySick>0</immunityPerDaySick>
+				<!-- <severityPerDayNotImmune>-0.05</severityPerDayNotImmune>
+				<severityPerDayImmune>-0.05</severityPerDayImmune> -->
+				<severityPerDayNotImmune>-5</severityPerDayNotImmune>
+				<severityPerDayImmune>-5</severityPerDayImmune>
+			</li>
+    </comps>
+
+    <stages>
+			<li>
+				<minSeverity>0.000</minSeverity>
+				<label>exausted</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+          <AimingDelayFactor>0.2</AimingDelayFactor>
+          <MeleeHitChance>-4</MeleeHitChance>
+          <MeleeDodgeChance>-4</MeleeDodgeChance>
+          <InjuryHealingFactor>-0.10</InjuryHealingFactor>
+          <MoveSpeed>-0.2</MoveSpeed>
+          <PainShockThreshold>-0.5</PainShockThreshold>
+        </statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.200</minSeverity>
+				<label>waining</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
+          <MeleeHitChance>4</MeleeHitChance>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
+          <InjuryHealingFactor>0.10</InjuryHealingFactor>
+          <MoveSpeed>0.2</MoveSpeed>
+          <PainShockThreshold>0.5</PainShockThreshold>
+        </statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.600</minSeverity>
+				<label>optimal</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.4</AimingDelayFactor>
+          <MeleeHitChance>8</MeleeHitChance>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+          <InjuryHealingFactor>0.25</InjuryHealingFactor>
+          <MoveSpeed>0.4</MoveSpeed>
+          <PainShockThreshold>0.10</PainShockThreshold>
+        </statOffsets>
+			</li>
+		</stages>
+  </HediffDef>
+</Defs>
