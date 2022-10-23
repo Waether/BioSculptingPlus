@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(255, 178, 102)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+				<immunityPerDayNotSick>0</immunityPerDayNotSick>
+				<immunityPerDaySick>0</immunityPerDaySick>
+				<severityPerDayNotImmune>-0.05</severityPerDayNotImmune>
+				<severityPerDayImmune>-0.05</severityPerDayImmune>
+			</li>
+    </comps>
+
+    <defName>BioOptDef</defName>
+    <label>BioOptLabel</label>
+    <description>A strange mechanite that infest the body of it's host and alters it slowly.</description>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+
+    <stages>
+			<li>
+				<minSeverity>0.000</minSeverity>
+				<label>exausted</label>
+        <capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.200</minSeverity>
+				<label>tired</label>
+        <capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.600</minSeverity>
+				<label>optimized</label>
+        <capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.30</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+  </HediffDef>
+</Defs>

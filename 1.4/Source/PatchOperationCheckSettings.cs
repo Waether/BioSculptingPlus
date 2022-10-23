@@ -34,6 +34,9 @@ namespace BioSculptingPlus
                     case "ShowImmunityCycle":
                         total = BioSculptingPlusMod.settings.ImmunityCycleSettings.Enabled && total;
                         break;
+                    case "ShowBioOptWorker":
+                        total = BioSculptingPlusMod.settings.BioOptWorkerCycleSettings.Enabled && total;
+                        break;
                     default:
                         total = false;
                         break;

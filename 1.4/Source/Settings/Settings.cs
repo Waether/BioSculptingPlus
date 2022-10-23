@@ -13,6 +13,8 @@ namespace BioSculptingPlus
         public CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, RecommendedValues.VoiceCycle.Duration);
         public CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, RecommendedValues.ToughCycle.Duration);
         public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, RecommendedValues.ImmunityCycle.Duration);
+        
+        public CycleSettings BioOptWorkerCycleSettings = new CycleSettings("Settings_BioOptWorkerCycleSettingsCycle", true, RecommendedValues.BioOptWorkerCycleSettingsCycle.Duration);
 
         private Vector2 scrollPosition;
 
@@ -26,13 +28,15 @@ namespace BioSculptingPlus
             ToughCycleSettings.ScribeValues("ToughCycle");
             ImmunityCycleSettings.ScribeValues("ImmunityCycle");
 
+            BioOptWorkerCycleSettings.ScribeValues("BioOptWorkerCycle");
+
             base.ExposeData();
         }
 
         public void DoWindowContents(Rect canvas)
         {
             Rect outRect = canvas.TopPart(0.9f);
-            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 620f);
+            Rect rect = new Rect(0f, 0f, outRect.width - 18f, 720f);
             Widgets.BeginScrollView(outRect, ref scrollPosition, rect);
             Listing_Standard list = new Listing_Standard();
             list.Begin(rect);
@@ -46,6 +50,8 @@ namespace BioSculptingPlus
             ToughCycleSettings.DoCustomCycleSettings(ref list);
             list.DrawGapLine();
             ImmunityCycleSettings.DoCustomCycleSettings(ref list);
+            list.DrawGapLine();
+            BioOptWorkerCycleSettings.DoCustomCycleSettings(ref list);
 
             list.End();
             Widgets.EndScrollView();
@@ -74,6 +80,9 @@ namespace BioSculptingPlus
 
                 // Immunity Cycle
                 ImmunityCycleSettings.Duration = RecommendedValues.ImmunityCycle.Duration;
+
+                // BioOptWorker Cycle
+                BioOptWorkerCycleSettings.Duration = RecommendedValues.BioOptWorkerCycleSettingsCycle.Duration;
 
                 ApplySettings();
             }
@@ -121,6 +130,13 @@ namespace BioSculptingPlus
             if (CompImmunityCycle != null)
             {
                 CompImmunityCycle.durationDays = ImmunityCycleSettings.Duration;
+            }
+
+            // BioOpt Worker Cycle
+            var CompBioOptWorkerCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ImmunityCycle, CompProperties_BiosculpterPod_ImmunityCycle>();
+            if (CompBioOptWorkerCycle != null)
+            {
+                CompBioOptWorkerCycle.durationDays = BioOptWorkerCycleSettings.Duration;
             }
 
         }

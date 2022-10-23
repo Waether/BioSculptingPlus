@@ -27,6 +27,11 @@
         {
             public const float Duration = 8.0f;
         }
+        
+        public static class BioOptWorkerCycleSettingsCycle
+        {
+            public const float Duration = 8.0f;
+        }
 
     }
 }

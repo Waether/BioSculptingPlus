@@ -66,6 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BioSculpterCycles\BioOptimisation\Worker\CompBiosculpterPod_BioOptWoker.cs" />
+    <Compile Include="BioSculpterCycles\BioOptimisation\Worker\CompProperties_BiosculpterPod_BioOptWorker.cs" />
     <Compile Include="BioSculpterCycles\Immunity\CompBiosculpterPod_ImunityCycle.cs" />
     <Compile Include="BioSculpterCycles\Tough\CompBiosculpterPod_ToughCycle.cs" />
     <Compile Include="BioSculpterCycles\VoiceFix\CompBiosculpterPod_VoiceCycle.cs" />
