@@ -4,12 +4,12 @@
     {
         public static class BeautyCycle
         {
-            public const float Duration = 4.0f;
+            public const float Duration = 6.0f;
         }
 
         public static class AgeIncreaseCycle
         {
-            public const float Duration = 2.0f;
+            public const float Duration = 4.0f;
             public const float Potency = 60.0f;
         }
 
@@ -28,9 +28,5 @@
             public const float Duration = 8.0f;
         }
 
-        public static class HediffCycle
-        {
-            public const float Duration = 8.0f;
-        }
     }
 }
