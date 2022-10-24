@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <ThinkTreeDef>
+    <defName>MainColonistBioOptimization</defName>
+    <insertTag>Humanlike_PostMain</insertTag>
+    <insertPriority>12</insertPriority>
+    <thinkRoot Class="ThinkNode_PrioritySorter">
+      <subNodes>
+        <li Class="BioSculptingPlus.JobGiver_GetBioOptimization_Soldier"/>
+        <li Class="BioSculptingPlus.JobGiver_GetBioOptimization_Worker"/>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>

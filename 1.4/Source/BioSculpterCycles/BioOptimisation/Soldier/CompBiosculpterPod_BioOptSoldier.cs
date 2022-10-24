@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using Verse;
-using Verse.Noise;
 
 namespace BioSculptingPlus
 {
@@ -8,12 +7,13 @@ namespace BioSculptingPlus
     {
         public static HediffDef BioOpt_Soldier = HediffDef.Named("BioOptSoldierDef");
 
+        public static string Key = "biooptsoldierkey";
+
         public override void CycleCompleted(Pawn pawn)
         {
             var toAdd = HediffMaker.MakeHediff(BioOpt_Soldier, pawn);
 
             pawn.health.AddHediff(toAdd);
-
             return;
         }
     }

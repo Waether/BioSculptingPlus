@@ -33,7 +33,7 @@
           <MeleeDodgeChance>-4</MeleeDodgeChance>
           <InjuryHealingFactor>-0.10</InjuryHealingFactor>
           <MoveSpeed>-0.2</MoveSpeed>
-          <PainShockThreshold>-0.5</PainShockThreshold>
+          <PainShockThreshold>-0.1</PainShockThreshold>
         </statOffsets>
 			</li>
 			<li>
@@ -46,7 +46,7 @@
           <MeleeDodgeChance>4</MeleeDodgeChance>
           <InjuryHealingFactor>0.10</InjuryHealingFactor>
           <MoveSpeed>0.2</MoveSpeed>
-          <PainShockThreshold>0.5</PainShockThreshold>
+          <PainShockThreshold>0.1</PainShockThreshold>
         </statOffsets>
 			</li>
 			<li>
@@ -59,7 +59,7 @@
           <MeleeDodgeChance>8</MeleeDodgeChance>
           <InjuryHealingFactor>0.25</InjuryHealingFactor>
           <MoveSpeed>0.4</MoveSpeed>
-          <PainShockThreshold>0.10</PainShockThreshold>
+          <PainShockThreshold>0.2</PainShockThreshold>
         </statOffsets>
 			</li>
 		</stages>

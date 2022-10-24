@@ -4,6 +4,12 @@
     <hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(255, 178, 102)</defaultLabelColor>
 		<initialSeverity>1</initialSeverity>
+    <defName>BioOptWorkerDef</defName>
+    <label>BioOptWorkerLabel</label>
+    <description>Bio Opt Worker Desc.</description>
+    <makesSickThought>false</makesSickThought>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
 
     <comps>
       <li Class="HediffCompProperties_Immunizable">
@@ -16,12 +22,6 @@
 			</li>
     </comps>
 
-    <defName>BioOptDef</defName>
-    <label>BioOptLabel</label>
-    <description>Bio Opt Desc.</description>
-    <makesSickThought>false</makesSickThought>
-    <tendable>false</tendable>
-    <maxSeverity>1</maxSeverity>
 
     <stages>
 			<li>
