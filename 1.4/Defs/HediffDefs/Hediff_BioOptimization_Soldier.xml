@@ -28,7 +28,7 @@
 				<label>exausted</label>
         <statOffsets>
           <ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
-          <AimingDelayFactor>0.2</AimingDelayFactor>
+          <AimingDelayFactor>0.1</AimingDelayFactor>
           <MeleeHitChance>-4</MeleeHitChance>
           <MeleeDodgeChance>-4</MeleeDodgeChance>
           <InjuryHealingFactor>-0.10</InjuryHealingFactor>
@@ -41,7 +41,7 @@
 				<label>waining</label>
         <statOffsets>
           <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
-          <AimingDelayFactor>-0.2</AimingDelayFactor>
+          <AimingDelayFactor>-0.1</AimingDelayFactor>
           <MeleeHitChance>4</MeleeHitChance>
           <MeleeDodgeChance>4</MeleeDodgeChance>
           <InjuryHealingFactor>0.10</InjuryHealingFactor>
@@ -54,7 +54,7 @@
 				<label>optimal</label>
         <statOffsets>
           <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
-          <AimingDelayFactor>-0.4</AimingDelayFactor>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
           <MeleeHitChance>8</MeleeHitChance>
           <MeleeDodgeChance>8</MeleeDodgeChance>
           <InjuryHealingFactor>0.25</InjuryHealingFactor>
